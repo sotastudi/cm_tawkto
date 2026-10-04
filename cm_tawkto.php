@@ -10,7 +10,7 @@ class Cm_Tawkto extends Module
     {
         $this->name = 'cm_tawkto';
         $this->tab = 'advertising_marketing';
-        $this->version = '2.0.0';
+        $this->version = '2.0.1';
         $this->author = 'sotastudi';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = ['min' => '9.0.0', 'max' => _PS_VERSION_];
@@ -67,6 +67,11 @@ class Cm_Tawkto extends Module
     protected function renderForm()
     {
         $languages = Language::getLanguages(false);
+        $defaultLangId = (int) Configuration::get('PS_LANG_DEFAULT');
+        foreach ($languages as &$language) {
+            $language['is_default'] = ((int) $language['id_lang'] === $defaultLangId) ? 1 : 0;
+        }
+        unset($language);
 
         $fields_form = [
             'form' => [

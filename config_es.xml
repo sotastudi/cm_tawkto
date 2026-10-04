@@ -2,7 +2,7 @@
 <module>
     <name>cm_tawkto</name>
     <displayName><![CDATA[CM. Chat Tawk.to]]></displayName>
-    <version><![CDATA[2.0.0]]></version>
+    <version><![CDATA[2.0.1]]></version>
     <description><![CDATA[Widget de Tawk.to configurable por idioma y tienda.]]></description>
     <author><![CDATA[sotastudi]]></author>
     <tab><![CDATA[advertising_marketing]]></tab>
